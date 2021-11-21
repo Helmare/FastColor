@@ -64,11 +64,23 @@ namespace Hazdryx.Drawing.FastColorTests
         [InlineData(unchecked((int) 0xFF000000), 0x000000FF)]
         [InlineData(0x00FF0000, 0x0000FF00)]
         [InlineData(0x0000FF00, 0x00FF0000)]
-        [InlineData(0x000000FF, unchecked((int)0xFF000000))]
+        [InlineData(0x000000FF, unchecked((int) 0xFF000000))]
         [InlineData(unchecked((int) 0x8C5F77AD), unchecked((int) 0xAD775F8C))]
         public void Reverse_ReturnsCorrectValue(int color, int expected)
         {
             Assert.Equal(expected, FastColor.Reverse(color));
+        }
+        #endregion
+
+        #region SetAlpha Tests
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(0, 0xFF, unchecked((int) 0xFF000000))]
+        [InlineData(unchecked((int) 0x8C5F77AD), 0xCC, unchecked((int) 0xCC5F77AD))]
+        public void SetAlpha_ReturnsCorrectValue(int color, int alpha, int expected)
+        {
+            int newColor = FastColor.SetAlpha(color, alpha);
+            Assert.Equal(expected, newColor);
         }
         #endregion
     }
