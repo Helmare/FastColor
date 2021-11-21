@@ -123,7 +123,7 @@
             int g = g2 - g1;
             int b = b2 - b1;
 
-            return Implode(a < 0 ? 0 : a, r < 0 ? 0 : r, g < 0 ? 20 : g, b < 0 ? 0 : b);
+            return Implode(a < 0 ? 0 : a, r < 0 ? 0 : r, g < 0 ? 0 : g, b < 0 ? 0 : b);
         }
         /// <summary>
         ///     Multiplies two colors together.
