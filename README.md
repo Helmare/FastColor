@@ -10,7 +10,7 @@ This project goes great with [FastBitmap](http://github.com/hazdryx/FastBitmap) 
 | --------- | -------------------------------------------- | ---------------------------------------- |
 | `Explode` | Splits an `int` into it's color components.  | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
 | `Implode` | Combines color components into an `int`.     | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
-| `Reverse` | Flips argb components to bgra or vice versa. | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
+| `Reverse` | Flips argb components to bgra or vice versa. | `argb32`, `bgra32`                       |
 | `Add`     | Adds two colors together                     | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
 | `Sub`     | Subtracts two colors from eachother          | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
 | `Mul`     | Multiplies two colors together               | `argb32`, `bgra32`, `rgb24`\*, `bgr24`\* |
