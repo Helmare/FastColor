@@ -34,6 +34,19 @@
         }
 
         /// <summary>
+        ///     Flips an argb32 color into a bgra32 or vice versa.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="r"></param>
+        /// <param name="g"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static int Reverse(int color)
+        {
+            return (color & 0xff) << 24 | ((color >> 8) & 0xff) << 16 | ((color >> 16) & 0xff) << 8 | (color >> 24) & 0xff;
+        }
+
+        /// <summary>
         ///     Adds two colors together.
         ///     <code>color2 + color1</code>
         /// </summary>
@@ -88,7 +101,7 @@
             int g = g2 * g1 / 255;
             int b = b2 * b1 / 255;
 
-            return Implode(a , r , g , b);
+            return Implode(a, r, g, b);
         }
     }
 }
