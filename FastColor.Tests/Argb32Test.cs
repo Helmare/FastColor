@@ -83,5 +83,39 @@ namespace Hazdryx.Drawing.FastColorTests
             Assert.Equal(expected, newColor);
         }
         #endregion
+
+        #region Math Operation Tests
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(unchecked((int) 0xFFFFFFFF), unchecked((int) 0xFFFFFFFF), unchecked((int) 0xFFFFFFFF))]
+        [InlineData(unchecked((int) 0x8C5F77AD), unchecked((int) 0xCC375D5F), unchecked((int) 0xFF96D4FF))]
+        [InlineData(unchecked((int) 0xCC375D5F), unchecked((int) 0x8C5F77AD), unchecked((int) 0xFF96D4FF))]
+        public void Add_CalculatesCorrectly(int color1, int color2, int expected)
+        {
+            int result = FastColor.Add(color1, color2);
+            Assert.Equal(expected, result);
+        }
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(unchecked((int) 0xFFFFFFFF), unchecked((int) 0xFFFFFFFF), 0)]
+        [InlineData(unchecked((int) 0x8C5F77AD), unchecked((int) 0xCC375D5F), 0x40000000)]
+        [InlineData(unchecked((int) 0xCC375D5F), unchecked((int) 0x8C5F77AD), 0x00281A4E)]
+        public void Sub_CalculatesCorrectly(int color1, int color2, int expected)
+        {
+            int result = FastColor.Sub(color1, color2);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(unchecked((int) 0xFFFFFFFF), unchecked((int) 0xFFFFFFFF), unchecked((int) 0xFFFFFFFF))]
+        [InlineData(unchecked((int) 0x8C5F77AD), unchecked((int) 0xCC375D5F), 0x70142B40)]
+        [InlineData(unchecked((int) 0xCC375D5F), unchecked((int) 0x8C5F77AD), 0x70142B40)]
+        public void Mul_CalculatesCorrectly(int color1, int color2, int expected)
+        {
+            int result = FastColor.Mul(color1, color2);
+            Assert.Equal(expected, result);
+        }
+        #endregion
     }
 }
