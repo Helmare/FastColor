@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastColor", "FastColor\FastColor.csproj", "{B14B01D5-0493-42E0-9B2F-EE524CA8A35D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastColor", "FastColor\FastColor.csproj", "{B14B01D5-0493-42E0-9B2F-EE524CA8A35D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastColor.Tests", "FastColor.Tests\FastColor.Tests.csproj", "{8FAC1581-99D2-46A0-B73D-CA62923DC019}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B14B01D5-0493-42E0-9B2F-EE524CA8A35D} = {B14B01D5-0493-42E0-9B2F-EE524CA8A35D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{B14B01D5-0493-42E0-9B2F-EE524CA8A35D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B14B01D5-0493-42E0-9B2F-EE524CA8A35D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B14B01D5-0493-42E0-9B2F-EE524CA8A35D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAC1581-99D2-46A0-B73D-CA62923DC019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAC1581-99D2-46A0-B73D-CA62923DC019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAC1581-99D2-46A0-B73D-CA62923DC019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAC1581-99D2-46A0-B73D-CA62923DC019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
