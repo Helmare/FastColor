@@ -1,5 +1,10 @@
 # FastColor
-As the name suggest, this project features fast color operations ideal for high speed image processing. This project goes great with [FastBitmap](http://github.com/hazdryx/FastBitmap) for high performance image manipulation on the CPU. The table below shows what operations are currently supported and for what color formats.
+As the name suggest, this project features fast color operations ideal for high speed image processing. 
+
+[![nuget](https://img.shields.io/nuget/v/Hazdryx.FastColor.svg)](https://www.nuget.org/packages/Hazdryx.FastColor/)
+![build](https://github.com/hazdryx/FastColor/actions/workflows/publish.yml/badge.svg)
+
+This project goes great with [FastBitmap](http://github.com/hazdryx/FastBitmap) for high performance image manipulation on the CPU. The table below shows what operations are currently supported and for what color formats.
 
 | Operation | Description                                  | Color Formats                            |
 | --------- | -------------------------------------------- | ---------------------------------------- |
