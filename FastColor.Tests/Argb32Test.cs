@@ -1,7 +1,6 @@
 using Xunit;
-using Hazdryx.Drawing;
 
-namespace Hazdryx.Drawing.Tests
+namespace Hazdryx.Drawing.FastColorTests
 {
     /// <summary>
     ///     A test class for argb32 operations in <code>FastColor</code>.
@@ -56,6 +55,20 @@ namespace Hazdryx.Drawing.Tests
         {
             int color = FastColor.Implode(a, r, g, b);
             Assert.Equal(expected, color);
+        }
+        #endregion
+
+        #region Reverse Tests
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(unchecked((int) 0xFF000000), 0x000000FF)]
+        [InlineData(0x00FF0000, 0x0000FF00)]
+        [InlineData(0x0000FF00, 0x00FF0000)]
+        [InlineData(0x000000FF, unchecked((int)0xFF000000))]
+        [InlineData(unchecked((int) 0x8C5F77AD), unchecked((int) 0xAD775F8C))]
+        public void Reverse_ReturnsCorrectValue(int color, int expected)
+        {
+            Assert.Equal(expected, FastColor.Reverse(color));
         }
         #endregion
     }
