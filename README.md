@@ -27,5 +27,3 @@ If you would like to make changes to the codebase or documentation, you can subm
 
 ### Donate
 If you don't want to submit a pull request or just want to support my work further, consider sending me a donation. Donations help me spend more time on open-source projects so they can be of the highest quality possible.
-
-<a href="https://www.buymeacoffee.com/hazdryx" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
